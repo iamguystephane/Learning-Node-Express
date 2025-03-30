@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
+console.log("start");
 // platform-independent way to get file paths
 const firstPathname = path.join(__dirname, "content", "first.txt")
 const secondPathname = path.join(__dirname, "content", "second.txt");
@@ -20,3 +21,5 @@ fs.writeFileSync(
   }
 );
 console.log("done with this task");
+console.log("Starting the next one");
+// Note: This code is synchronous, so it will block the event loop until the file operations are complete.

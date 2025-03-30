@@ -1,6 +1,7 @@
 const { readFile, writeFile } = require("fs");
 const { join } = require("path");
 
+console.log("start");
 const firstPath = join(__dirname, "content", "first.txt");
 const secondPath = join(__dirname, "content", "second.txt");
 
@@ -29,3 +30,6 @@ readFile(firstPath, "utf8", (err, result) => {
     );
   });
 });
+
+console.log("Starting the next one");
+// Note: This code is asynchronous, so it will not block the event loop. The next console.log will run before the file operations are complete.
